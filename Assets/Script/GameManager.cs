@@ -27,26 +27,26 @@ public class GameManager : MonoBehaviour {
 	}
 
 	// reset the ball position
-	public void resetBall() {
+	public void ResetBall() {
 	
 		ball.gameObject.transform.localPosition = new Vector3(0, 0, 0);
-		ball.setVelocity(new Vector2(5, 5));
+		ball.SetVelocity(new Vector2(5, 5));
 	}
 	
 	// getter/setter for adding scores
-	public void addPlayerScore(int score) {
+	public void AddPlayerScore(int score) {
 		player_score += score;
 	}
 
-	public void addEnemyScore(int score) {
+	public void AddEnemyScore(int score) {
 		enemy_score += score;
 	}
 
-	public int getPlayerScore() {
+	public int GetPlayerScore() {
 		return player_score;
 	}
 
-	public int getEnemyScore() {
+	public int GetEnemyScore() {
 		return enemy_score;
 	}
 }

@@ -16,8 +16,18 @@ public class Enemy : Paddle {
 		// enemy follows ball's y position
 		if(ball) {
 			Vector3 pos = transform.position;
+			float height = transform.localScale.y * 0.8f;       //affecting how responsive enemy to the ball position
+			Vector3 pos_ball = ball.gameObject.transform.position;
+		
+			if(pos_ball.y > (pos.y + height / 2) ) {
+				this.position_offset = new Vector3(0, speed, 0);
+			} else if(pos_ball.y < (pos.y - height / 2)) {
+				this.position_offset = new Vector3(0, -speed, 0);
+			} else {
+				this.position_offset = Vector3.zero;
+			}
 
-			transform.position = new Vector3(pos.x, ball.gameObject.transform.position.y, pos.z);
+			base.Update();
 		}
 	}
 }

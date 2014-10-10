@@ -23,11 +23,11 @@ public class ScoreArea : MonoBehaviour {
 
 		if(other.gameObject.tag == "ball") {
 			if(player_score_area) {
-				game_manager.addPlayerScore(1);
-				game_manager.resetBall();
+				game_manager.AddPlayerScore(1);
+				game_manager.ResetBall();
 			} else {
-				game_manager.addEnemyScore(1);
-				game_manager.resetBall();
+				game_manager.AddEnemyScore(1);
+				game_manager.ResetBall();
 			}
 		}
 	}

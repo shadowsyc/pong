@@ -24,4 +24,8 @@ public class Paddle : MonoBehaviour {
 			}
 		}
 	}
+
+	public Vector3 getPositionOffset() {
+		return position_offset;
+	}
 }
